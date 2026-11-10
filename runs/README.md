@@ -1,6 +1,6 @@
 # Rapportera modellförsök
 
-Lägg en valfri `run.json` i `days/01/agent/`, bredvid `solution.json`. Vid nästa push läses den från samma exakta commit som lösningen. Den analyseras först när AoC har godkänt den aktuella delen. Gamla analyserade rapporter ligger kvar i årets historik.
+Lägg en valfri `run.json` i `days/01/agent/`, bredvid dagslösningens README. Vid nästa push läses den från samma exakta commit som lösningen. Den analyseras först när AoC har godkänt den aktuella delen. Gamla analyserade rapporter ligger kvar i årets historik.
 
 ```json
 {

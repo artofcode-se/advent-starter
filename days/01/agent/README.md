@@ -1,6 +1,6 @@
 # Dag 1 · agent
 
-Agentens producerade lösning ligger i `src/`. Skriv eller generera tester och Dockerfile. Beskriv körningen utan att återpublicera AoC:s uppgiftstext, personliga indata eller råa loggar.
+Agentens producerade lösning ligger i `src/`. Ingen `solution.json` behövs. Skriv eller generera tester och Dockerfile. Beskriv körningen utan att återpublicera AoC:s uppgiftstext, personliga indata eller råa loggar.
 
 ## Dokumentera din lösning
 
