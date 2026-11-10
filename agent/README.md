@@ -6,7 +6,7 @@ Fyll i instruktionerna så att någon annan kan köra och vidareutveckla agenten
 
 - Ange verktyg, versioner, modeller och nödvändiga lokala beroenden.
 - Beskriv miljövariabler med tomma eller ofarliga exempelvärden. Dela aldrig nycklar eller sessioner.
-- Ange hur år, dag och del väljs. Året ska matcha `advent.json`; 2025 är vår övningssäsong.
+- Ange hur år, dag och del väljs. Året ska matcha `advent.json`; 2025 är vår övningsår.
 
 ## Kör och testa
 
@@ -23,4 +23,4 @@ Lägg in dina faktiska kommandon för installation, en agentkörning och tester.
 
 Spara dagens lösning i `days/01/agent/`. Cachelagra AoC-material i `.private/`, respektera väntetider och stoppa återkommande fel. Kör inte loopar som gissar svar.
 
-Publicera bara en sammanfattning av körningen i `runs/`, utan uppgiftstext, indata eller konversationer. Referera till exakt lösningscommit och den commit som agentsystemet kördes från.
+Rapportera använda modeller i dagens `days/NN/agent/run.json`, utan uppgiftstext, indata eller konversationer. Formatet beskrivs i `runs/README.md`. GitHub-workflowet kopplar rapporten till samma commit som lösningen.
