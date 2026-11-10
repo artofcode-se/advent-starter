@@ -33,6 +33,8 @@ Färdiga exempel ligger utanför `days/` och registreras inte som dina egna lös
 
 ## Körkontrakt för dina lösningar
 
+Dockerfile beskriver hur språk, beroenden och kod sätts ihop till en körmiljö. Det gör att andra kan klona ditt repo och prova lösningen med Docker, utan att installera ditt språk lokalt. Att själv beskriva miljön, testa den och dokumentera körningen är en del av övningen.
+
 Bygg från repots rot med en Dockerfile per dag och spår:
 
 ```sh
@@ -40,7 +42,13 @@ docker build -f days/01/manual/Dockerfile -t advent-day01 .
 docker run --rm -i advent-day01 --part 1 < .private/inputs/01.txt
 ```
 
-Programmet läser stdin, skriver svaret på stdout och diagnostik på stderr. Testa med egna små data. Vår server gör statisk analys och kör aldrig din kod.
+Programmet läser stdin, skriver svaret på stdout och diagnostik på stderr. Dina privata indata skickas in först vid körning; de ska inte byggas in i imagen. `.dockerignore` utesluter `.private/` från byggkontexten. Publicera egna små testdata som andra kan använda utan tillgång till dina AoC-indata.
+
+Dag-1-exemplens Dockerfiles kör tester under bygget. Startrepots workflow **Verify teaching examples** bygger dessutom båda exempelcontainrarna och kontrollerar CLI:t för båda delarna med egna testdata. Detta workflow gäller exemplen; lägg till motsvarande kontroll för dina egna `days/`-lösningar om du vill ha den i CI.
+
+Vår server gör i dagsläget statisk analys och kör inte deltagarkod eller Dockerfiles. Dockerfile räknas som infrastruktur, separat från lösningens kodrader. Vi mäter eller rangordnar ingen exekveringstid. Docker ger ett gemensamt sätt att starta programmen, men en rättvis prestandajämförelse skulle även behöva samma testdata, hårdvara, resursgränser och upprepade mätningar.
+
+I agentspåret kör dagens container den producerade lösningen. Själva agentsystemet och instruktionerna för att köra det hör hemma i `agent/`; att köra dagslösningen startar inte en AI-modell.
 
 ## Gör det lätt att lära av dig
 
