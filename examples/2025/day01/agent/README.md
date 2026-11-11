@@ -4,6 +4,8 @@ Läs originaluppgiften hos [Advent of Code](https://adventofcode.com/2025/day/1)
 
 Detta är ett AI-assisterat undervisningsexempel, inte en tävlingsinlämning. Det visar en producerad lösning med modulär aritmetik. Agentinstruktioner finns i instructions/. Båda delarna stöds. Lösningen har lokala tester, men är inte verifierad med en deltagares privata input eller ett godkännande från AoC.
 
+Exemplet innehåller inget färdigt automatiserat agentsystem. Målet för ditt eget agentspår är att bygga flödet som producerar, testar och publicerar lösningen med så lite mänsklig inblandning som möjligt. Beskriv ditt system i repots `agent/` och redovisa vilka delar som fortfarande kräver din hjälp.
+
 ## Varför finns Dockerfile?
 
 Den paketerar Python 3.13, lösningen och testerna så att någon annan kan klona repot och testköra utan en lokal Python-installation. Docker behöver vara installerat. Agenten ska kunna leverera en lösning vars körmiljö går att förstå och återanvända.

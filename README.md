@@ -6,6 +6,12 @@ Skapa ett eget publikt repo med **Use this template → Create a new repository*
 
 ## Kom igång
 
+Välj **eget hantverk**, där du skriver lösningen själv utan generativ AI, eller **automatiserat agentsystem**, där du bygger systemet som löser uppgiften.
+
+**Målet för agentspåret är ett automatiserat flöde med så lite mänsklig inblandning som möjligt.** Du bygger och konfigurerar systemet i `agent/`. Efter start driver det arbetet: hämta uppgift → skriv kod → testa → rätta fel och testa igen → lämna svar → publicera lösningen i `days/NN/agent/`.
+
+Du får använda AI när du bygger systemet. Att själv styra en chatt som löser dagens pussel är AI-assisterad problemlösning och uppfyller inte i sig agentspårets mål. Börja gärna med ett steg och bygg vidare. Redovisa i README vad som var automatiserat, när du behövde ingripa och vad du vill automatisera härnäst. Försök med mänsklig hjälp är också välkomna.
+
 1. Gå med i ART of Codes privata lista på [Advent of Code 2025](https://adventofcode.com/2025/leaderboard/private) med koden `1487429-4647410c`.
 2. Fyll i `aoc_user_id`, `display_name` och `year` i `advent.json`. Logga in på AoC och öppna [Settings](https://adventofcode.com/2025/settings). Vid namnalternativet **Anonymous User #123456** står ditt numeriska ID efter `#`. Du behöver inte välja alternativet eller ändra namn. Skriv numret i `aoc_user_id`; `display_name` är namnet du själv vill visa hos oss. Använd 2025 för övning och 2026 för premiären, med ett separat repo per år. Förstasidan samlar dina årsrepon i samma presentation, med årsmärken och ett filter för anmälningsår.
    Skriv gärna en kort presentation i `bio` (högst 160 tecken), till exempel vem du är och vad du vill prova. Fältet är valfritt och kan ändras med en ny push.
@@ -75,7 +81,7 @@ examples/2025/day01/      Två färdiga undervisningsexempel (spoilers)
 .github/workflows/        Pushflödet till ART of Codes API
 ```
 
-Färdiga exempel ligger utanför `days/` och registreras inte som dina egna lösningar. Båda skapades med AI-stöd för undervisning. Hantverksexemplet visar arbetssättet; det är inte en deltagares handskrivna tävlingsinlämning.
+Färdiga exempel ligger utanför `days/` och registreras inte som dina egna lösningar. Båda skapades med AI-stöd för undervisning. Hantverksexemplet visar arbetssättet; det är inte en deltagares handskrivna tävlingsinlämning. Agentexemplet visar en producerad dagslösning, inte ett färdigt automatiserat agentsystem.
 
 ## Körkontrakt för dina lösningar
 

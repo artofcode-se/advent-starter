@@ -2,6 +2,10 @@
 
 Fyll i instruktionerna så att någon annan kan köra och vidareutveckla agenten från en ny klon.
 
+**Målet är ett automatiserat flöde med så lite mänsklig inblandning som möjligt.** Du bygger och konfigurerar systemet; efter start driver systemet arbetet mellan stegen. Du får använda AI för att bygga systemet. Att manuellt chatta fram dagens lösning är AI-assisterad problemlösning och uppfyller inte i sig agentspårets mål.
+
+Börja smått och bygg vidare. Beskriv vilka steg som är automatiserade, när du behövde hjälpa till och vad du vill automatisera härnäst.
+
 ## Installera och konfigurera
 
 - Ange verktyg, versioner, modeller och nödvändiga lokala beroenden.
@@ -14,7 +18,8 @@ Lägg in dina faktiska kommandon för installation, en agentkörning och tester.
 
 ## Förstå och ändra flödet
 
-- Beskriv hämta → lösa → testa → lämna svar → publicera och var respektive steg finns i koden.
+- Beskriv hämta → skriva kod → testa → rätta fel och testa igen → lämna svar → publicera och var respektive steg finns i koden.
+- Visa hur systemet använder återkoppling, begränsar omförsök, respekterar väntetider och stannar när det behöver hjälp.
 - Lägg agentinstruktioner i `instructions/` och länka till dem här.
 - Visa hur man ändrar en instruktion, byter modell och återupptar en avbruten körning.
 - Beskriv ett förbättringsförslag och vad du har lärt dig av tidigare försök.
