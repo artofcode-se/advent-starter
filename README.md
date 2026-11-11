@@ -4,6 +4,8 @@
 
 **Alla deltagare visas på sajten.** När din första push har registrerats visas ditt namn, din presentation och repolänk på förstasidan. Du behöver ingen färdig lösning. Att bara gå med i AoC-listan registrerar dig inte här.
 
+**Vi julstökar öppet.** För att kunna följa dina framsteg och lära av varandra sparar vi ditt AoC-ID, kopplingen till GitHub och dina resultat. Ditt visningsnamn, GitHub-bild, repo, valfria presentation och resultat visas öppet på sajten. [Så hanterar vi dina uppgifter](https://aoc.artofcode.se/integritet/) – och så gör du om du vill få dem borttagna.
+
 ## Registrera dig i tre steg
 
 Du kan göra hela registreringen i webbläsaren. [Haka på](https://aoc.artofcode.se/kom-igang/) visar samma steg med årsväljare och kopierbar gruppkod.
