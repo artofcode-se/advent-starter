@@ -1,30 +1,34 @@
 # Julstök med ART of Code
 
-Skapa ett eget publikt repo med **Use this template → Create a new repository**. Mallen har workflow, båda spåren och instruktioner klara. Du behöver ingen inloggning på vår sajt och ingen API-nyckel till oss.
+**Utgå från det här startrepot för att delta.** Skapa ditt eget publika repo med **Use this template → Create a new repository**. Behåll filerna under `.github/`; de färdigkonfigurerade GitHub Actions-flödena registrerar repot och skickar dina lösningar till analys. Mallen har workflow, båda spåren och instruktioner klara. Du behöver ingen inloggning på vår sajt och ingen API-nyckel till oss.
 
 **Alla deltagare visas på sajten.** När din första push har registrerats visas ditt namn, din presentation och repolänk på förstasidan. Du behöver ingen färdig lösning. Att bara gå med i AoC-listan registrerar dig inte här.
 
-## Kom igång
+## Registrera dig i tre steg
 
-Välj **eget hantverk**, där du skriver lösningen själv utan generativ AI, eller **automatiserat agentsystem**, där du bygger systemet som löser uppgiften.
+Du kan göra hela registreringen i webbläsaren. [Haka på](https://aoc.artofcode.se/kom-igang/) visar samma steg med årsväljare och kopierbar gruppkod.
+
+1. **Gå med på AoC.** Logga in och gå med i ART of Codes [privata lista](https://adventofcode.com/2025/leaderboard/private) med koden `1487429-4647410c`. Hämta också ditt numeriska AoC-ID i [Settings](https://adventofcode.com/2025/settings): siffrorna efter `#` i **Anonymous User #123456**. Du behöver inte välja alternativet eller ändra namn. Samma gruppkod gäller för 2025 och 2026.
+2. **Skapa ditt repo från mallen.** På [advent-starter](https://github.com/artofcode-se/advent-starter) väljer du **Use this template → Create a new repository**, ditt personliga GitHub-konto och **Public**. Skapa ett repo per år. Har du redan skapat ditt repo från mallen är detta klart. Behåll `.github/` med de färdigkonfigurerade Actions-flödena.
+3. **Fyll i och spara.** Öppna `advent.json` i ditt nya repo på GitHub och klicka på pennan. Fyll i `aoc_user_id`, `display_name` och `year`: 2025 för övning eller 2026 för premiären. Lägg gärna till `bio`, en valfri presentation på högst 160 tecken. Välj **Commit changes** och spara till repots default branch, vanligtvis `main`. Du kan också redigera lokalt, committa och pusha. Workflowet registrerar GitHub-konto och repo automatiskt.
+
+**Klart när ditt namn syns på [förstasidan](https://aoc.artofcode.se/#deltagare).** Det sker inom ungefär en minut efter lyckad registrering. I **Actions → Publicera Advent-lösningar → senaste körningen** ser du om den har tagits emot. Ditt AoC-medlemskap bekräftas vid nästa synk, normalt inom 15 minuter; därefter syns du även på topplistorna. Du behöver ingen färdig lösning. Förstasidan samlar dina årsrepon i samma presentation, med årsmärken och ett filter för anmälningsår.
+
+Vi litar på att du anger ditt eget AoC-ID. GitHub bekräftar repo och ägare; AoC-listan bekräftar medlemskap, inte kontoägarskap. Om AoC-resultaten inte visas, kontrollera ID, år och gruppmedlemskap. Rätta filen och spara igen. Kontakta ART of Code om ett redan anslutet ID är fel.
+
+## Registrerad? Börja koda
+
+Klona ditt nya repo och välj **eget hantverk**, där du skriver lösningen själv utan generativ AI, eller **automatiserat agentsystem**, där du bygger systemet som löser uppgiften. Du kan prova båda spåren i samma repo.
 
 **Målet för agentspåret är ett automatiserat flöde med så lite mänsklig inblandning som möjligt.** Du bygger och konfigurerar systemet i `agent/`. Efter start driver det arbetet: hämta uppgift → skriv kod → testa → rätta fel och testa igen → lämna svar → publicera lösningen i `days/NN/agent/`.
 
 Du får använda AI när du bygger systemet. Att själv styra en chatt som löser dagens pussel är AI-assisterad problemlösning och uppfyller inte i sig agentspårets mål. Börja gärna med ett steg och bygg vidare. Redovisa i README vad som var automatiserat, när du behövde ingripa och vad du vill automatisera härnäst. Försök med mänsklig hjälp är också välkomna.
 
-1. Gå med i ART of Codes privata lista på [Advent of Code 2025](https://adventofcode.com/2025/leaderboard/private) med koden `1487429-4647410c`.
-2. Fyll i `aoc_user_id`, `display_name` och `year` i `advent.json`. Logga in på AoC och öppna [Settings](https://adventofcode.com/2025/settings). Vid namnalternativet **Anonymous User #123456** står ditt numeriska ID efter `#`. Du behöver inte välja alternativet eller ändra namn. Skriv numret i `aoc_user_id`; `display_name` är namnet du själv vill visa hos oss. Använd 2025 för övning och 2026 för premiären, med ett separat repo per år. Förstasidan samlar dina årsrepon i samma presentation, med årsmärken och ett filter för anmälningsår.
-   Skriv gärna en kort presentation i `bio` (högst 160 tecken), till exempel vem du är och vad du vill prova. Fältet är valfritt och kan ändras med en ny push.
-3. Committa `advent.json` och pusha till repots default branch, vanligtvis `main`. Workflowet registrerar ditt GitHub-konto och repo automatiskt. Öppna **Actions → Publicera Advent-lösningar → senaste körningen** för besked om att registreringen tagits emot. Vi kontrollerar ditt AoC-ID i gruppens lista vid nästa synk, normalt inom 15 minuter. Därefter syns du på topplistorna. Du behöver inte ändra ditt AoC-visningsnamn.
-4. Skriv lösning, egna tester, Dockerfile och README under `days/01/manual/` eller `days/01/agent/`. Lägg själva koden i `src/`; du behöver ingen extra config-fil.
-5. Lämna svaret på AoC och pusha koden. Workflowet registrerar versionen; servern väntar på godkännande för rätt år, dag och del innan den analyserar.
-6. Fortsätt förbättra och pusha. Historiken sparar nya commits; samma commit ger inga dubbletter. Workflowet kan också startas manuellt via **Run workflow**.
-
-För testmiljön kan en repository variable `ADVENT_API_URL` peka på test-API:ts `/api/v1/github/push`. Standard är produktion på `https://aoc.artofcode.se/api/v1/github/push`. GitHub Actions behöver `contents: read` och `id-token: write`, vilket redan är angivet i workflowet. Token skapas kortvarigt av GitHub; du ska inte skapa en egen nyckel.
-
-Vi litar på att du anger ditt eget AoC-ID. GitHub bekräftar repo och ägare; AoC-listan bekräftar medlemskap, inte kontoägarskap. Om AoC-resultaten inte visas, kontrollera ID, år och gruppmedlemskap. Rätta filen och pusha igen. Kontakta ART of Code om ett redan anslutet ID är fel.
+Skriv lösning, egna tester, Dockerfile och README under `days/01/manual/` eller `days/01/agent/`. Lägg själva koden i `src/`; du behöver ingen extra config-fil. Lämna svaret på AoC och pusha koden. Workflowet registrerar versionen; servern väntar på godkännande för rätt år, dag och del innan den analyserar. Fortsätt förbättra och pusha när du vill. Historiken sparar nya commits; samma commit ger inga dubbletter. Workflowet kan också startas manuellt via **Run workflow**.
 
 [Förstå startrepot, fil för fil](https://aoc.artofcode.se/startrepot/) visar vad varje fil gör och hur pushflödet fungerar.
+
+För testmiljön kan en repository variable `ADVENT_API_URL` peka på test-API:ts `/api/v1/github/push`. Standard är produktion på `https://aoc.artofcode.se/api/v1/github/push`. GitHub Actions behöver `contents: read` och `id-token: write`, vilket redan är angivet i workflowet. Token skapas kortvarigt av GitHub; du ska inte skapa en egen nyckel.
 
 ## När är analysen färdig?
 
@@ -110,7 +114,7 @@ Beskriv installation och versioner, körkommandon, tester, kodens huvudidé och 
 
 Låt agenten skriva en valfri `run.json` i agentens dagsmapp, exempelvis `days/01/agent/run.json`. Se [rapportformatet](runs/README.md). Rapportera faktiskt modell-ID från anropets svar, inte bara verktygsnamnet. Modeller märks alltid som självrapporterade. Samma modell räknas en gång per år; nya versioner och språk finns kvar i historiken.
 
-Kodrader jämförs per dag, del och spår. Inlämningstid ger inga poäng.
+Kodrader jämförs per dag och del. **Alla** visar både hantverk och agent, med en märkt rad per deltagare och spår. Har du lösningar i båda spåren syns båda, med den senaste färdiga analysen för respektive spår. Du kan också filtrera på ett spår. Inlämningstid ger inga poäng.
 
 ## Öppet och privat
 
